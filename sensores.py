@@ -1,8 +1,8 @@
 # How to wire:
 # VCC to pin 2; GND to pin 6;
 # TRIG to pin 12 (GPIO18);
-#connect the 330Ω resistor to ECHO.
-#On its end you connect it to Pin 18 (GPIO24) and through a 470Ω resistor you connect it also to Pin6 (GND).
+#connect the 330 resistor to ECHO.
+#On its end you connect it to Pin 18 (GPIO24) and through a 470 resistor you connect it also to Pin6 (GND).
 # inspired by: https://tutorials-raspberrypi.com/raspberry-pi-ultrasonic-sensor-hc-sr04/
 
 #Libraries
