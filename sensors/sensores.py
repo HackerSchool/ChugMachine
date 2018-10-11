@@ -42,13 +42,23 @@ class sensor:
         return distance
 
     def figureOutNextState(self):
-        
 
-    def state0(self):
+    def state
+
+
+
+
+
+
+
+
+
+
+    0(self):
 
     def state1(self):
 
-    def state 2(self):
+    def state2(self):
 
 
 
