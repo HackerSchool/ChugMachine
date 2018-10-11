@@ -1,0 +1,5 @@
+jogo:
+  state0: esperar por input no browser
+  state1: seleciona o modo de jogo(e.g. numero de copos por jogador) e recebe os nomes dos jogadores
+  state2: jogo propriamente dito
+  state3: dá o vencedor, guarda os tempos num rank
