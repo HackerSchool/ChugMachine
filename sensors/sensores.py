@@ -1,17 +1,32 @@
+#Este script tem tudo o que é preciso para controlar e saber o estado dos sensores,
+#para corre lo basta chamar a funcao sensorsLoop(ListaDeSensores).
+#a classe "sensor" e as funcoes dela são super simples, mas como foram feitas
+#em blocos simples e separados, dá para alterar facilmente cada estado e cada transição
+#Em princípio basta criar uma lista de sensores na main.py e, em cada loop da main ou do
+#jogo chamar a sensorsLoop(ListaDeSensores) para isto funcionar
+
+
 #Libraries
 import RPi.GPIO as GPIO
 import time
 
 class sensor:
     def __init__(self, name,TRIGGER,ECHO):
-        self.name = name
-        self.trigger = TRIGGER
-        self.echo = ECHO
-        self.timer = 0
-        self.state = 0
+        self.name = name #nome do sensor
+        self.trigger = TRIGGER #num do pin de pin de trigger (no pi)
+        self.echo = ECHO #num do pin de echo (no pi)
+        self.timer = 0.0 #guarda o tempo desde que o sensor foi ativado
+        self.state = 0 #guarda o estado do sensor : 0-> sensor em stand by; 1-> sensor em contagem
+        self.previousTimer = 0.0 #talvez fazer uma lista de timers??
+        self.startTime = 0.0 #guarda o tempo no instante em que foi iniciado o timer (ver time.time() para mais info)
 
+        #Para definir os pins de entrada e de saída
         GPIO.setup(self.trigger,   GPIO.OUT)
         GPIO.setup(self.echo, GPIO.IN)
+
+
+
+# Function to calculate the distance measured by the sensor
 
 
     def distance(self):
@@ -41,40 +56,49 @@ class sensor:
 
         return distance
 
+
+
+
     def figureOutNextState(self):
-
-    def state
-
+        minDist = 10 #cms
 
 
+        if (self.state == 0 and self.distance() > minDist ):
+            #condition to transition from state 0->1
+            self.state0To1()
 
+        if(self.state ==1):
+            self.doState1()
 
-
-
-
-
-
-    0(self):
-
-    def state1(self):
-
-    def state2(self):
+        if(self.state == 1 and self.distance() <= mindDist):
+            self.state1To0()
 
 
 
 
+    def state0To1(self):
+        self.StartTime = time.time()
+        self.state = 1
+
+    def state1To0(self):
+        self.previousTimer = self.timer
+        self.timer = 0.0
+        self.state = 0
+
+    def doState1(self):
+        self.timer = time.time() - self.startTime
+
+
+def sensorsLoop(ListaDeSensores):
+    for sensor in ListaDeSensores:
+        sensor.figureOutNextState()
 
 
 
 #GPIO Mode (BOARD / BCM)
 GPIO.setmode(GPIO.BCM)
+#Exemplo de variaveis:
+#sensor1 = sensor("sensor1",18,24)
+#sensor2 = sensor("sensor2",13,15)
 
-sensor1 = sensor("sensor1",18,24)
-
-
-
-
-
-#set GPIO Pins
-#GPIO_TRIGGER = 18
-#GPIO_ECHO = 24
+#sensors = [sensor1,sensor2]
