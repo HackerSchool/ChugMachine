@@ -10,4 +10,4 @@ try:
         print("State: " + str(sensor1.state) +  " ; Timer: " + str(sensor1.timer) + " \n")
 
 except KeyboardInterrupt:
-    print("Dude porque é que me terminaste?\n")
+    print("Dude porque e que me terminaste?\n")

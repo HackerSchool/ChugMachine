@@ -25,7 +25,6 @@ class sensor:
         GPIO.setup(self.echo, GPIO.IN)
 
 
-
 # Function to calculate the distance measured by the sensor
 
 
