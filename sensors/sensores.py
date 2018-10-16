@@ -76,7 +76,7 @@ class sensor:
 
 
     def state0To1(self):
-        self.StartTime = time.time()
+        self.startTime = time.time()
         self.state = 1
 
     def state1To0(self):
