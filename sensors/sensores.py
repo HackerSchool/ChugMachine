@@ -1,7 +1,7 @@
 #Este script tem tudo o que e preciso para controlar e saber o estado dos sensores,
 #para corre lo basta chamar a funcao sensorsLoop(ListaDeSensores).
-#a classe "sensor" e as funcoes dela são super simples, mas como foram feitas
-#em blocos simples e separados, dá para alterar facilmente cada estado e cada transiçao
+#a classe "sensor" e as funcoes dela sao super simples, mas como foram feitas
+#em blocos simples e separados, da para alterar facilmente cada estado e cada transicao
 #Em principio basta criar uma lista de sensores na main.py e, em cada loop da main ou do
 #jogo chamar a sensorsLoop(ListaDeSensores) para isto funcionar
 
@@ -20,7 +20,7 @@ class sensor:
         self.previousTimer = 0.0 #talvez fazer uma lista de timers??
         self.startTime = 0.0 #guarda o tempo no instante em que foi iniciado o timer (ver time.time() para mais info)
 
-        #Para definir os pins de entrada e de saída
+        #Para definir os pins de entrada e de saida
         GPIO.setup(self.trigger,   GPIO.OUT)
         GPIO.setup(self.echo, GPIO.IN)
 
