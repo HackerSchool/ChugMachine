@@ -59,7 +59,7 @@ class sensor:
 
 
     def figureOutNextState(self):
-        minDist = 10 #cms
+        minDist = 27.5 #cms
 
 
         if (self.state == 0 and self.distance() > minDist ):
