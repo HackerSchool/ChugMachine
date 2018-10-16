@@ -1,8 +1,8 @@
-#Este script tem tudo o que é preciso para controlar e saber o estado dos sensores,
+#Este script tem tudo o que e preciso para controlar e saber o estado dos sensores,
 #para corre lo basta chamar a funcao sensorsLoop(ListaDeSensores).
 #a classe "sensor" e as funcoes dela são super simples, mas como foram feitas
-#em blocos simples e separados, dá para alterar facilmente cada estado e cada transição
-#Em princípio basta criar uma lista de sensores na main.py e, em cada loop da main ou do
+#em blocos simples e separados, dá para alterar facilmente cada estado e cada transiçao
+#Em principio basta criar uma lista de sensores na main.py e, em cada loop da main ou do
 #jogo chamar a sensorsLoop(ListaDeSensores) para isto funcionar
 
 
