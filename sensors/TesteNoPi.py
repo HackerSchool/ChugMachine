@@ -1,12 +1,11 @@
-from sensores import sensor,  sensorsLoop
-
+import sensores
 GPIO.setmode(GPIO.BCM)
 
-sensor1 = sensor("sensor1",18,24)
+sensor1 = sensores.sensor("sensor1",18,24)
 ListaDeSensores = [sensor1]
 try:
     while True:
-        sensorsLoop(ListaDeSensores)
+        sensores.sensorsLoop(ListaDeSensores)
         print("State: " + str(sensor1.state) +  " ; Timer: " + str(sensor1.timer) + " \n")
 
 except KeyboardInterrupt:
