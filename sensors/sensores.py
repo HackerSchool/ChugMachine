@@ -69,7 +69,7 @@ class sensor:
         if(self.state ==1):
             self.doState1()
 
-        if(self.state == 1 and self.distance() <= mindDist):
+        if(self.state == 1 and self.distance() <= minDist):
             self.state1To0()
 
 
