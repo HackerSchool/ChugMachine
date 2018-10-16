@@ -95,7 +95,7 @@ def sensorsLoop(ListaDeSensores):
 
 
 #GPIO Mode (BOARD / BCM)
-GPIO.setmode(GPIO.BCM)
+#GPIO.setmode(GPIO.BCM)
 #Exemplo de variaveis:
 #sensor1 = sensor("sensor1",18,24)
 #sensor2 = sensor("sensor2",13,15)

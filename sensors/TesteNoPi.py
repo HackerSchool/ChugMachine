@@ -1,4 +1,6 @@
 import sensores
+import time
+import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 
 sensor1 = sensores.sensor("sensor1",18,24)
