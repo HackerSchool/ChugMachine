@@ -9,6 +9,6 @@ try:
     while True:
         sensores.sensorsLoop(ListaDeSensores)
         print("State: " + str(sensor1.state) +  " ; Timer: " + str(sensor1.timer) + " StartTime : " + str(sensor1.startTime) + " \n")
-        time.sleep(1)
+        
 except KeyboardInterrupt:
     print("Dude porque e que me terminaste?\n")
