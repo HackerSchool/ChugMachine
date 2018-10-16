@@ -1,4 +1,4 @@
-import sensores.py
+from sensores import sensor,  sensorsLoop
 
 GPIO.setmode(GPIO.BCM)
 
@@ -7,7 +7,7 @@ ListaDeSensores = [sensor1]
 try:
     while True:
         sensorsLoop(ListaDeSensores)
-        print("State: " sensor1.state" ; Timer: " sensor1.timer " \n")
+        print("State: " + str(sensor1.state) +  " ; Timer: " + str(sensor1.timer) + " \n")
 
-exceptKeyboardInterrupt:
+except KeyboardInterrupt:
     print("Dude porque é que me terminaste?\n")
